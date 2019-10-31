@@ -6,5 +6,9 @@
 
 <h1>Contact</h1>
 
+    <form action="">
+        <input type="email">
+    </form>
+
 @endsection
 
