@@ -11,7 +11,7 @@ class MessagesController extends Controller
             "email" => 'required|email',
             "subject" => 'required',
             "content" => 'required|min:3'
-        ]);
+        ], ['name.required' => 'Porfavor, escribe tu nombe']);
 
         return "Datos validados";
     }
