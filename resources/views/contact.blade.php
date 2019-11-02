@@ -7,7 +7,7 @@
 <h1>{{ __('Contact') }}</h1>
 
 
-<form method="post" action="{{ route('contact') }}">
+<form method="post" action="{{ route('messages.store') }}">
 
         @csrf
 
