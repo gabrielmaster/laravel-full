@@ -5,6 +5,8 @@
 @section('content')
 
 <h1>Home</h1>
-Bievenid@ {{ $nombre ?? "Invitado" }}
+@auth
+    {{ auth()->user()->name }}
+@endauth
 
 @endsection
