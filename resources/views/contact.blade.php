@@ -22,5 +22,7 @@
         <button>@lang('Send')</button>
     </form>
 
+
+
 @endsection
 
