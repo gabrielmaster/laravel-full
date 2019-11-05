@@ -1,15 +1,16 @@
 @extends('layout')
 
-@section('title','Portfolio')
+@section('title','Projects')
 
 @section('content')
 
-<h1>Portfolio</h1>
+    <h1>@lang('Projects')</h1>
+<a href="{{ route('projects.create') }}">Crear proyecto</a>
 
 <ul>
 
     @forelse($projects as $project)
-<li><a href="{{ route('projects.show', $project) }}">{{ $project->title }}</a></li>
+        <li><a href="{{ route('projects.show', $project) }}">{{ $project->title }}</a></li>
     @empty
         <li>No hay Proyectos para mostrar</li>
     @endforelse
