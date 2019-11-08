@@ -16,6 +16,7 @@
 
             @csrf
             <h1 class="display-4">{{ __('Contact') }}</h1>
+            <hr>
     <div class="form-group">
         <label for="name">Nombre</label>
         <input class="form-control bg-light shadow-sm @error('name') is-invalid @else border-0 @enderror" type="text" id="name" name="name" placeholder="Nombre..." value="{{ old('name') }}">
