@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Project;
 
 class SaveProjectRequest extends FormRequest
 {
@@ -11,6 +12,7 @@ class SaveProjectRequest extends FormRequest
      *
      * @return bool
      */
+
     public function authorize()
     {
         return true;
@@ -23,9 +25,18 @@ class SaveProjectRequest extends FormRequest
      */
     public function rules()
     {
+        // Check Create or Update
+        if ($this->method() == 'PATCH') {
+            $url_rule = ['required', 'unique:projects,url,' . $this->project->url . ',url']; //para actualizar
+
+        } else {
+            $url_rule = ['required', 'unique:projects,url']; //para crear nuevo
+        }
+
+
         return [
             'title' => 'required',
-            'url' => 'required',
+            'url'  => $url_rule,
             'description' => 'required'
         ];
     }

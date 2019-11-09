@@ -14,4 +14,4 @@
 </div>
 
 <button class="btn btn-success btn-block">{{ $btnText }}</button>
-<a class="btn btn-link btn-block" href="{{ route('projects.index') }}">Cancelar</a>
+<a class="btn btn-block btn-outline-danger" href="{{ route('projects.index') }}">Cancelar</a>

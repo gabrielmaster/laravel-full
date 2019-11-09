@@ -25,7 +25,7 @@
                     </span>
 
                     <span class="text-black-50">
-                        {{ $project->created_at->format('d/m/Y') }}
+                        {{ Carbon\Carbon::parse($project->created_at)->format('d/m/Y') }}
                     </span>
                 </a>
             </li>
